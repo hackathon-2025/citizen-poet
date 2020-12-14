@@ -1,0 +1,13 @@
+.header__menu-link {
+  font-family: "Open-Sans", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
+  text-decoration: none;
+}
+
+.header__menu-link:hover {
+  color: red;
+}
