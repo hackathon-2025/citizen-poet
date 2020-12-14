@@ -1,0 +1,11 @@
+.problem-card {
+  width: 350px;
+  height: 436px;
+  margin-right: 30px;
+  background: #F4F4F4;
+  border-radius: 8px;
+}
+
+.problem-card:nth-child(3n) {
+  margin-right: 0;
+}
