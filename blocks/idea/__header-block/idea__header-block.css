@@ -1,0 +1,6 @@
+.idea__header-block {
+  width: 1105px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}

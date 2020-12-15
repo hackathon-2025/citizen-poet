@@ -1,0 +1,14 @@
+.path__text {
+  margin-left: 10px;
+  margin-right: 10px;
+  font-family: "Open-Sans", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  color: #898385;
+}
+
+.path__text:first-child {
+  margin-left: 0;
+}

@@ -1,0 +1,11 @@
+.quote__card {
+  width: 348px;
+  height: 433px;
+  background: #C4C4C4;
+  border-radius: 8px;
+  margin-right: 48px;
+}
+
+.quote__card:nth-child(3n) {
+  margin-right: 0;
+}

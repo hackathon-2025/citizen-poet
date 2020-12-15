@@ -1,0 +1,8 @@
+.path {
+  width: 403px;
+  height: 25px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}

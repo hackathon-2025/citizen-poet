@@ -1,0 +1,7 @@
+.footer__nav-list {
+  list-style-type: none;
+  padding-left: 0;
+  display: inline-block;
+  columns: 2;
+  text-align: left;
+}

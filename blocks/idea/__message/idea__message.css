@@ -1,0 +1,19 @@
+.idea__message textarea {
+  width: 1120px;
+  height: 280px;
+  margin-top: 30px;
+  margin-bottom: 35px;
+  background: #F2F2F2;
+  border: none;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding-top: 37px;
+  padding-left: 13px;
+  resize: none;
+  font-family: "Open-Sans", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #4F4F4F;
+}

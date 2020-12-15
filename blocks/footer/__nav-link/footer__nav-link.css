@@ -1,0 +1,11 @@
+.footer__nav-link {
+  font-family: "Open-Sans", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  color: #212121;
+  text-decoration: none;
+  margin-bottom: 20px;
+  display: block;
+}
