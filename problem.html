@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./pages/index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>Активный гражданин-поэт</title>
+</head>
+
+<body class="body">
+  <div class="page">
+    <header class="header">
+      <div class="header__logo">
+        <img class="header__badge" src="./images/header-logo.svg" alt="открытая книга">
+        <h1 class="header__title">Гражданин Поэт</h1>
+      </div>
+      <nav class="header__menu">
+        <ul class="header__list">
+          <li>
+            <a class="header__menu-link" href="index.html#about">О нас</a>
+          </li>
+          <li>
+            <a class="header__menu-link" href="index.html#problems">Решить проблему</a>
+          </li>
+          <li>
+            <a class="header__menu-link" href="index.html#idea">Предложить идею</a>
+          </li>
+          <li>
+            <a class="header__menu-link" href="index.html#leader">Лайк Владимир Владмировичу</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="content">
+      <section class="report">
+        <div class="path">
+          <p class="path__text">Сообщить о проблеме</p>
+          <div class="path__arrow" id="problemTopic"></div>
+          <p class="path__text">Мой двор</p>
+          <div class="path__arrow" id="problemSubtopic"></div>
+          <p class="path__text">Уборка</p>
+        </div>
+        <h2 class="report__title">Расскажите подробнее о проблеме</h2>
+        <div class="report__form">
+          <!-- template? (разобраться как сделать список с городами) -->
+          <select required class="city-select">
+            <option value="" style="display:none">Выбрать свой город</option>
+            <option value="1" style="color:black">Город</option>
+            <option value="2" style="color:black">Город</option>
+            <option value="3" style="color:black">Город</option>
+            <option value="4" style="color:black">Город</option>
+          </select>
+          <input class="report__input" type="text" placeholder="Ул. Луганская">
+          <input class="report__input" type="text" placeholder="20">
+          <div class="idea__message">
+            <textarea placeholder="Ваша жалоба"></textarea>
+          </div>
+        </div>
+        <div class="quote">
+          <div class="quote__card">
+            <blockquote class="quote__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.
+              Integer ullamcorper neque eu purus euismod, ac faucibus mauris posuere. Morbi non ultrices ligula.
+              Sed dictum, enim sed ullamcorper feugiat, dui odio vehicula eros, a sollicitudin lorem quam nec sem.
+              Mauris tincidunt feugiat diam convallis pharetra. Nulla facilisis semper laoreet.
+            </blockquote>
+            <p class="quote__author">Автор</p>
+          </div>
+          <div class="quote__card">
+            <blockquote class="quote__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.
+              Integer ullamcorper neque eu purus euismod, ac faucibus mauris posuere. Morbi non ultrices ligula.
+              Sed dictum, enim sed ullamcorper feugiat, dui odio vehicula eros, a sollicitudin lorem quam nec sem.
+              Mauris tincidunt feugiat diam convallis pharetra. Nulla facilisis semper laoreet.
+            </blockquote>
+            <p class="quote__author">Автор</p>
+          </div>
+          <div class="quote__card">
+            <blockquote class="quote__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.
+              Integer ullamcorper neque eu purus euismod, ac faucibus mauris posuere. Morbi non ultrices ligula.
+              Sed dictum, enim sed ullamcorper feugiat, dui odio vehicula eros, a sollicitudin lorem quam nec sem.
+              Mauris tincidunt feugiat diam convallis pharetra. Nulla facilisis semper laoreet.
+            </blockquote>
+            <p class="quote__author">Автор</p>
+          </div>
+        </div>
+        <button class="report__button" type="button">Пройти цензуру</button>
+        <button class="report__button" type="button">Отправить</button>
+      </section>
+
+
+    </main>
+    <footer class="footer">
+      <div class="footer__container">
+        <nav class="footer__nav-menu">
+          <h4 class="footer__nav-title">Навигация</h4>
+          <ul class="footer__nav-list">
+            <li>
+              <a class="footer__nav-link" href="index.html#about">О нас</a>
+            </li>
+            <li>
+              <a class="footer__nav-link" href="index.html#problems">Решить проблему</a>
+            </li>
+            <li>
+              <a class="footer__nav-link" href="index.html#idea">Предложить идею</a>
+            </li>
+            <li>
+              <a class="footer__nav-link" href="index.html#leader">Лайк Владимир Владмировичу</a>
+            </li>
+          </ul>
+        </nav>
+        <nav class="footer__soc-menu">
+          <h4 class="footer__soc-title">Мы в соц.сетях</h4>
+          <ul class="footer__soc-list">
+            <li>
+              <img class="footer__soc-icon" src="../../../images/footer-inst.svg" alt="Inst">
+            </li>
+            <li>
+              <img class="footer__soc-icon" src="../../../images/footer-vk.svg" alt="Inst">
+            </li>
+            <li>
+              <img class="footer__soc-icon" src="../../../images/footer-youtube.svg" alt="Inst">
+            </li>
+          </ul>
+        </nav>
+
+      </div>
+      <p class="footer__copyright">© Гражданин - поэт. 2020 </p>
+
+    </footer>
+  </div>
+</body>
+
+</html>

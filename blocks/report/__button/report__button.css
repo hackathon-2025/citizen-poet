@@ -1,17 +1,19 @@
-.idea__button {
+.report__button {
   width: 250px;
   height: 60px;
   background: #4F4F4F;
   border-radius: 8px;
   font-family: "Open-Sans", Arial, sans-serif;
   font-style: normal;
-  font-weight: 700;
+  font-weight: bold;
   font-size: 18px;
   line-height: 25px;
   text-align: center;
   color: #FFFFFF;
+  margin-left: 430px;
+  margin-top: 20px;
 }
 
-.idea__button:hover {
+.report__button:hover {
   cursor: pointer;
 }

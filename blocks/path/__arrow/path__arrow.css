@@ -1,0 +1,9 @@
+.path__arrow {
+  width: 10px;
+  height: 12px;
+  background-image:url('../../../images/path-arrow.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 0;
+}

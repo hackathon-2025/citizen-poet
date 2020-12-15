@@ -1,0 +1,14 @@
+.social__image {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.social__image:first-child {
+  margin-top: 16px;
+}
+.social__image:nth-child(2n) {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.social__image:nth-child(3n) {
+  margin-bottom: 16px;
+}

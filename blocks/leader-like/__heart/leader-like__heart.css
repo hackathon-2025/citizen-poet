@@ -1,0 +1,13 @@
+.leader-like__heart {
+  margin-right: 30px;
+  width: 71px;
+  height: 71px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url('../../../images/heart-inactive.svg');
+}
+
+.leader-like__heart:hover {
+  cursor: pointer;
+}
