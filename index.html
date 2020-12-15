@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./pages/index.css">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
   <title>Активный гражданин-поэт</title>
 </head>
 
@@ -36,6 +36,91 @@
         <!-- попробую карусель картинок дописать на чистом css -->
         <div class="gallery">
           <div class="gallery__image"></div>
+        </div>
+      </section>
+      <section class="about about_margin">
+        <h2 class="about__title">о нас</h2>
+        <div class="about__container">
+          <div class="about__paragraph">
+            <p class="about__text">Комьюнити “Гражданин - Поэт” - проект, разработанный с целью улучшения качества жизни граждан в формате поэтичной цензуры.
+              На портале Вы можете сообщить о проблеме (наличия ям, неисправностей и т.д) и предложить свою идею.
+            </p>
+            <p class="about__text">Вы можете улучшить город, отправив идею по его развитию в любое удобное для вас время.
+              На текущий момент идей получено: <span class="about__counter" id="ideaCount">11507</span>.</p>
+          </div>
+          <img src="../../../images/about-image.png" alt="Приложение на телефоне">
+        </div>
+      </section>
+      <section class="problems">
+        <h2 class="problems__title">Сообщить о проблеме</h2>
+        <div class="problems__container">
+          <div class="problem-card">
+            <img class="problem-card__image" src="../../../images/problem-house.png" alt="Дом">
+            <h3 class="problem-card__topic">Мой дом</h3>
+            <ul class="problem-card__list">
+              <li>
+                <a class="problem-card__subtopic" href="#">Пожарные системы и электричество</a>
+              </li>
+              <li>
+                <a class="problem-card__subtopic" href="#">Ремонт</a>
+              </li>
+              <li>
+                <a class="problem-card__subtopic" href="#">Тепло и водоснабжение</a>
+              </li>
+              <li>
+                <a class="problem-card__subtopic" href="#">Уборка дома</a>
+              </li>
+            </ul>
+          </div>
+          <div class="problem-card">
+            <img class="problem-card__image" src="../../../images/problem-yard.png" alt="Двор">
+            <h3 class="problem-card__topic">Мой двор</h3>
+            <ul class="problem-card__list">
+              <li>
+                <a class="problem-card__subtopic" href="#">Благоустройство</a>
+              </li>
+              <li>
+                <a class="problem-card__subtopic" href="#">Проезды и тротуары</a>
+              </li>
+              <li>
+                <a class="problem-card__subtopic" href="#">Уборка</a>
+              </li>
+            </ul>
+          </div>
+          <div class="problem-card">
+            <img class="problem-card__image" src="../../../images/problem-transport.png" alt="Транспорт">
+            <h3 class="problem-card__topic">Транспорт</h3>
+            <ul class="problem-card__list">
+              <li>
+                <a class="problem-card__subtopic" href="#">Наземный транспорт</a>
+              </li>
+              <li>
+                <a class="problem-card__subtopic" href="#">Метрополитен</a>
+              </li>
+              <li>
+                <a class="problem-card__subtopic" href="#">Остановки</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="idea">
+        <div class="idea__container">
+          <h2 class="idea__title">Предложить идею</h2>
+          <div class="idea__header-block">
+            <!-- template? (разобраться как сделать список с городами) -->
+            <select required class="city-select">
+              <option value="" style="display:none">Укажите Ваш город</option>
+              <option value="1" style="color:black">Город</option>
+              <option value="2" style="color:black">Город</option>
+              <option value="3" style="color:black">Город</option>
+              <option value="4" style="color:black">Город</option>
+            </select>
+            <img class="idea__image" src="../../../images/idea-lamp.png" alt="Лампочки">
+          </div>
+          <input class="idea__message" type="text" name="date" placeholder="Date (mm/dd)" required>
+          <button class="idea__button" type="button">Пройти цензуру</button>
+          <button class="idea__button idea__button_hide" type="button">Отправить</button>
         </div>
       </section>
     </main>

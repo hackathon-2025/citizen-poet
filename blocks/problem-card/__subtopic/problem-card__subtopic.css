@@ -1,0 +1,13 @@
+.problem-card__subtopic {
+  font-family: "Open-Sans", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  text-decoration-line: underline;
+  color: #212121;
+}
+
+.problem-card__subtopic:hover {
+  color: #EB5757;
+}

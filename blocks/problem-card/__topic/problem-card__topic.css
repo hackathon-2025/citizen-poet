@@ -1,0 +1,11 @@
+.problem-card__topic {
+  font-family: "Open-Sans", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 35px;
+  color: #212121;
+  margin-top: 25px;
+  margin-bottom: 0px;
+  margin-left: 26px;
+}
