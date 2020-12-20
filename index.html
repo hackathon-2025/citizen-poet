@@ -39,13 +39,24 @@
           <h2 class="intro__title">Гражданин -  Поэт</h2>
           <p class="intro__text">Это комьюнити для улучшения нашей Страны в формате поэзии. Тут мы решаем и предлагаем идеи.</p>
           <div class="intro__buttons">
-            <button class="intro__button" type="button">Сообщить о проблеме (кнопки пока никуда не ведут)</button>
-            <button class="intro__button" type="button">Лайк В.В.</button>
+            <button class="intro__button" onclick="location.href='problem.html'" type="button">Сообщить о проблеме</button>
+            <button class="intro__button" onclick="location.href='#leader'" type="button">Лайк В.В.</button>
           </div>
         </div>
         <!-- попробую карусель картинок дописать на чистом css -->
-        <div class="gallery">
-          <div class="gallery__image"></div>
+        <div class="sim-slider">
+          <ul class="sim-slider-list">
+            <li><img src="http://pvbk.spb.ru/inc/slider/imgs/no-image.gif" alt="screen"></li> <!-- это экран -->
+            <li class="sim-slider-element"><img src="http://pvbk.spb.ru/inc/slider/imgs/planet0.jpg" alt="0"></li>
+            <li class="sim-slider-element"><img src="http://pvbk.spb.ru/inc/slider/imgs/planet1.jpg" alt="1"></li>
+            <li class="sim-slider-element"><img src="http://pvbk.spb.ru/inc/slider/imgs/planet2.jpg" alt="2"></li>
+            <li class="sim-slider-element"><img src="http://pvbk.spb.ru/inc/slider/imgs/planet3.jpg" alt="3"></li>
+            <li class="sim-slider-element"><img src="http://pvbk.spb.ru/inc/slider/imgs/planet4.jpg" alt="4"></li>
+            <li class="sim-slider-element"><img src="http://pvbk.spb.ru/inc/slider/imgs/planet5.jpg" alt="5"></li>
+          </ul>
+          <div class="sim-slider-arrow-left"></div>
+          <div class="sim-slider-arrow-right"></div>
+          <div class="sim-slider-dots"></div>
         </div>
       </section>
       <section class="about about_margin"><a name="about"></a>
@@ -118,21 +129,20 @@
         <div class="idea__container">
           <h2 class="idea__title">Предложить идею</h2>
           <div class="idea__header-block">
-            <!-- template? (разобраться как сделать список с городами) -->
             <select required class="city-select">
-              <option value="" style="display:none">Укажите Ваш город</option>
-              <option value="1" style="color:black">Город1</option>
-              <option value="2" style="color:black">Город2</option>
-              <option value="3" style="color:black">Город3</option>
-              <option value="4" style="color:black">Город4</option>
+              <option value=""  style="display:none">Укажите Ваш город</option>
+              <option value="1" style="color:black">Москва</option>
+              <option value="2" style="color:black">Санкт-Петербург</option>
+              <option value="3" style="color:black">Екатеринбург</option>
+              <option value="4" style="color:gray">В других городах пока не работает</option>
             </select>
             <img class="idea__image" src="../../../images/idea-lamp.png" alt="Лампочки">
           </div>
           <div class="idea__message">
-            <textarea placeholder="Ваше предложение(В пожаловаться пока этот элемент, если функционал различен - необходимо заменить)"></textarea>
+            <textarea id="ideaText" placeholder="Ваше предложение"></textarea>
           </div>
-          <button class="idea__button" type="button">Пройти цензуру(кнопка отправки скрыта)</button>
-          <button class="idea__button idea__button_hide" type="button">Отправить</button>
+          <button id="ideaСensor"class="idea__button" type="button">Пройти цензуру</button>
+          <button id="ideaSend" class="idea__button idea__button_hide" type="button">Отправить</button>
         </div>
       </section>
       <section class="leader-like"><a name="leader"></a>
@@ -189,6 +199,9 @@
       <p class="footer__copyright">© Гражданин - поэт. 2020 </p>
     </footer>
   </div>
+  <script src="../scripts/index.js"></script>
+  <script src="../scripts/gallery.js"></script>
+
 </body>
 
 </html>

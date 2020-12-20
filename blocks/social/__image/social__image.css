@@ -12,3 +12,6 @@
 .social__image:nth-child(3n) {
   margin-bottom: 16px;
 }
+.social__image:hover {
+  cursor: pointer;
+}

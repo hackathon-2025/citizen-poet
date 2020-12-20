@@ -9,3 +9,7 @@
 .quote__card:nth-child(3n) {
   margin-right: 0;
 }
+
+.quote__card:hover {
+  cursor: pointer;
+}

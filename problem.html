@@ -55,10 +55,10 @@
           <input class="report__input" type="text" placeholder="Ул. Луганская">
           <input class="report__input" type="text" placeholder="20">
           <div class="idea__message">
-            <textarea placeholder="Ваша жалоба"></textarea>
+            <textarea id='reportText' placeholder="Ваша жалоба"></textarea>
           </div>
         </div>
-        <div class="quote">
+        <div class="quote quote_hide">
           <div class="quote__card">
             <blockquote class="quote__text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.
@@ -87,8 +87,8 @@
             <p class="quote__author">Автор</p>
           </div>
         </div>
-        <button class="report__button" type="button">Пройти цензуру</button>
-        <button class="report__button" type="button">Отправить</button>
+        <button id="reportCensor" class="report__button" type="button">Пройти цензуру</button>
+        <button id="reportSend" class="report__button report__button_hide" type="button">Отправить</button>
       </section>
 
 
@@ -128,10 +128,11 @@
         </nav>
 
       </div>
-      <p class="footer__copyright">© Гражданин - поэт. 2020 </p>
+      <p class="footer__copyright">© Гражданин - поэт. 2020</p>
 
     </footer>
   </div>
+  <script src="../scripts/problem.js"></script>
 </body>
 
 </html>
