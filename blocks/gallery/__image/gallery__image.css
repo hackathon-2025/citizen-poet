@@ -4,6 +4,7 @@
   background-repeat: no-repeat;
 }
 img {
+  border-radius: 8px;
   width: 100%;
 }
 .sim-slider {
