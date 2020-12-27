@@ -55,37 +55,10 @@
           <input class="report__input" type="text" placeholder="Ул. Луганская">
           <input class="report__input" type="text" placeholder="20">
           <div class="idea__message">
-            <textarea id='reportText' placeholder="Ваша жалоба"></textarea>
+            <textarea id='reportText' class="idea__text" placeholder="Ваша жалоба"></textarea>
           </div>
         </div>
-        <div class="quote quote_hide">
-          <div class="quote__card">
-            <blockquote class="quote__text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.
-              Integer ullamcorper neque eu purus euismod, ac faucibus mauris posuere. Morbi non ultrices ligula.
-              Sed dictum, enim sed ullamcorper feugiat, dui odio vehicula eros, a sollicitudin lorem quam nec sem.
-              Mauris tincidunt feugiat diam convallis pharetra. Nulla facilisis semper laoreet.
-            </blockquote>
-            <p class="quote__author">Автор</p>
-          </div>
-          <div class="quote__card">
-            <blockquote class="quote__text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.
-              Integer ullamcorper neque eu purus euismod, ac faucibus mauris posuere. Morbi non ultrices ligula.
-              Sed dictum, enim sed ullamcorper feugiat, dui odio vehicula eros, a sollicitudin lorem quam nec sem.
-              Mauris tincidunt feugiat diam convallis pharetra. Nulla facilisis semper laoreet.
-            </blockquote>
-            <p class="quote__author">Автор</p>
-          </div>
-          <div class="quote__card">
-            <blockquote class="quote__text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.
-              Integer ullamcorper neque eu purus euismod, ac faucibus mauris posuere. Morbi non ultrices ligula.
-              Sed dictum, enim sed ullamcorper feugiat, dui odio vehicula eros, a sollicitudin lorem quam nec sem.
-              Mauris tincidunt feugiat diam convallis pharetra. Nulla facilisis semper laoreet.
-            </blockquote>
-            <p class="quote__author">Автор</p>
-          </div>
+        <div class="quote">
         </div>
         <button id="reportCensor" class="report__button" type="button">Пройти цензуру</button>
         <button id="reportSend" class="report__button report__button_hide" type="button">Отправить</button>
@@ -132,7 +105,16 @@
 
     </footer>
   </div>
-  <script src="./scripts/problem.js"></script>
+
+  <template class="quote__template">
+    <div class="quote__card">
+      <blockquote class="quote__text">
+      </blockquote>
+      <p class="quote__author"></p>
+    </div>
+  </template>
+
+  <script type="module" src="./scripts/problem.js"></script>
 </body>
 
 </html>
