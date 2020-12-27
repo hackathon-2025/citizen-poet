@@ -88,6 +88,34 @@ api.getAllQuotes()
         })
       }
 
+      function getFormValues() {
+        const form = document.querySelector('.idea__container');
+        const cityInput = form.querySelector('.city-select');
+        const cardChoice = form.querySelectorAll('.quote__choice-btn');
+
+        const formValues = {};
+
+        function getRadioValue() {
+          for (let i=0; i<cardChoice.length; i++) {
+              if(cardChoice[i].checked) {
+                const poemText = cardChoice[i].closest('.quote__card').querySelector('.quote__text');
+                cardChoice[i].value = poemText.textContent;
+                return cardChoice[i].value;
+              }
+            }
+          }
+
+        formValues.city = cityInput.value;
+        formValues.text = getRadioValue();
+
+        console.log(formValues)
+
+        return formValues;
+      }
+
+const form = document.querySelector('.idea__container');
+const censorCards = document.querySelector('.quote');
+const succesMessage = document.querySelector('.idea__success-message');
 
 //цензура в блоке idea
 ideaСensor.addEventListener ('click', () => {
@@ -96,7 +124,24 @@ ideaСensor.addEventListener ('click', () => {
   getKeywords()
   ideaText.value = ('Выберите стих на карточке'); //нельзя изменить стих и он какой-то будет
   ideaText.disabled = true;
-  // censorCards.classList.remove('quote_hide');
+  censorCards.classList.remove('quote_hide');
+  succesMessage.classList.remove('idea__success-message_visible');
 });
+
+
+
+form.addEventListener('submit', (evt) => {
+  evt.preventDefault();
+  getFormValues();
+  // api.submitForm(getFormValues());
+
+  censorCards.classList.add('quote_hide');
+  succesMessage.classList.add('idea__success-message_visible');
+  ideaСensor.classList.remove('idea__button_hide');
+  ideaSend.classList.add('idea__button_hide');
+  ideaText.disabled = false;
+  ideaText.value = ('');
+})
+
 
 });

@@ -23,5 +23,18 @@ export default class Api {
       }).then(res => this._getResponseData(res));
   }
 
+  // Заготовка для отправки данных формы на сервер
+
+  submitForm(formData) {
+    return fetch(`${this._url}`, {
+        method: 'POST',
+        headers:  this._headers,
+        body: JSON.stringify({
+          city: formData.city,
+          text: formData.text,
+        })
+    }).then(res => this._getResponseData(res));
+
+}
 }
 
