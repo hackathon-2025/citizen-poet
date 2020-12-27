@@ -113,6 +113,9 @@ api.getAllQuotes()
         return formValues;
       }
 
+const form = document.querySelector('.idea__container');
+const censorCards = document.querySelector('.quote');
+const succesMessage = document.querySelector('.idea__success-message');
 
 //цензура в блоке idea
 ideaСensor.addEventListener ('click', () => {
@@ -121,14 +124,23 @@ ideaСensor.addEventListener ('click', () => {
   getKeywords()
   ideaText.value = ('Выберите стих на карточке'); //нельзя изменить стих и он какой-то будет
   ideaText.disabled = true;
-  // censorCards.classList.remove('quote_hide');
+  censorCards.classList.remove('quote_hide');
+  succesMessage.classList.remove('idea__success-message_visible');
 });
 
-const form = document.querySelector('.idea__container');
+
 
 form.addEventListener('submit', (evt) => {
   evt.preventDefault();
   getFormValues();
+  // api.submitForm(getFormValues());
+
+  censorCards.classList.add('quote_hide');
+  succesMessage.classList.add('idea__success-message_visible');
+  ideaСensor.classList.remove('idea__button_hide');
+  ideaSend.classList.add('idea__button_hide');
+  ideaText.disabled = false;
+  ideaText.value = ('');
 })
 
 

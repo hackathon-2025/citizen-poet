@@ -41,6 +41,7 @@
 @import url("../blocks/idea/__button/idea__button.css");
 @import url("../blocks/idea/__button/_hide/idea__button_hide.css");
 @import url("../blocks/idea/__title/idea__title.css");
+@import url("../blocks/idea/__succes-message/idea__success-message.css");
 @import url("../blocks/city-select/city-select.css");
 @import url("../blocks/leader-like/leader-like.css");
 @import url("../blocks/leader-like/__container/leader-like__container.css");
