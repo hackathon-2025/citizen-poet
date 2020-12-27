@@ -1,12 +1,15 @@
 .quote__card {
   width: 348px;
   height: 433px;
-  background: #C4C4C4;
+  background: #F2F2F2;
   border-radius: 8px;
   margin-right: 48px;
+  margin-bottom: 32px;
+  color: #000;
+  font-size: 16px;
 }
 
-.quote__card:nth-child(3n) {
+.quote__card:last-child {
   margin-right: 0;
 }
 

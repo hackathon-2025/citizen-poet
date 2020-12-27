@@ -11,8 +11,8 @@ img {
   max-width: 540px;
   min-width: 320px;
   padding: 30px 50px;
-  border: 1px solid #ccd;
-  background-color: white;
+  /* border: 1px solid #ccd; */
+  background-color: #0288D1;
   margin-left: 54px;
   margin-right: 0;
 }
@@ -87,7 +87,7 @@ span.sim-dot {
   margin: 5px 7px;
   padding: 0;
   display: inline-block;
-  background-color: #BBB;
+  background-color:  #EB5757;
   border-radius: 5px;
   cursor: pointer;
 }

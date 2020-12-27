@@ -1,7 +1,7 @@
 .report__button {
   width: 250px;
   height: 60px;
-  background: #4F4F4F;
+  background: #EB5757;
   border-radius: 8px;
   font-family: "Open-Sans", Arial, sans-serif;
   font-style: normal;
@@ -12,8 +12,10 @@
   color: #FFFFFF;
   margin-left: 430px;
   margin-top: 20px;
+  transition: background .4 ease-out;
 }
 
 .report__button:hover {
   cursor: pointer;
+  background-color: #B92F2F;
 }
