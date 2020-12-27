@@ -12,13 +12,13 @@ export default class Api {
      }
 
      getAllQuotes() {
-      return fetch(`http://www.buymebuyme.xyz`, {
+      return fetch(`https://www.buymebuyme.xyz`, {
           headers: this._headers,
       }).then(res => this._getResponseData(res));
     }
 
      getQuotesByKeyword(word) {
-      return fetch(`http://www.buymebuyme.xyz?q=${word}`, {
+      return fetch(`https://www.buymebuyme.xyz?q=${word}`, {
           headers: this._headers,
       }).then(res => this._getResponseData(res));
   }
