@@ -2,7 +2,7 @@
   width: 336px;
   height: 65px;
   appearance: none;
-  background-image: url(../../../images/select-arrow.svg);
+  background-image: url(../../images/select-arrow.svg);
   background-repeat: no-repeat;
   background-position: calc(100% - 20px) center;
   padding-left: 10px;
