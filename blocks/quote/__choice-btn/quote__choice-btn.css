@@ -1,0 +1,33 @@
+.quote__choice-btn {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.quote__radio-label {
+
+}
+
+.quote__pseudo-item {
+  display: inline-block;
+  vertical-align: middle;
+  width: 28px;
+  height: 28px;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  margin-left: 5px;
+  background: #fff;
+  border: 2px solid #EB5757;
+  border-radius: 50%;
+}
+
+.quote__choice-btn:checked + .quote__pseudo-item {
+  background-color: #B92F2F;
+}
+
+.quote__choice-btn:hover + .quote__pseudo-item {
+  cursor: pointer;
+}
