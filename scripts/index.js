@@ -88,6 +88,31 @@ api.getAllQuotes()
         })
       }
 
+      function getFormValues() {
+        const form = document.querySelector('.idea__container');
+        const cityInput = form.querySelector('.city-select');
+        const cardChoice = form.querySelectorAll('.quote__choice-btn');
+
+        const formValues = {};
+
+        function getRadioValue() {
+          for (let i=0; i<cardChoice.length; i++) {
+              if(cardChoice[i].checked) {
+                const poemText = cardChoice[i].closest('.quote__card').querySelector('.quote__text');
+                cardChoice[i].value = poemText.textContent;
+                return cardChoice[i].value;
+              }
+            }
+          }
+
+        formValues.city = cityInput.value;
+        formValues.text = getRadioValue();
+
+        console.log(formValues)
+
+        return formValues;
+      }
+
 
 //цензура в блоке idea
 ideaСensor.addEventListener ('click', () => {
@@ -98,5 +123,13 @@ ideaСensor.addEventListener ('click', () => {
   ideaText.disabled = true;
   // censorCards.classList.remove('quote_hide');
 });
+
+const form = document.querySelector('.idea__container');
+
+form.addEventListener('submit', (evt) => {
+  evt.preventDefault();
+  getFormValues();
+})
+
 
 });
