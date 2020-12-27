@@ -1,4 +1,6 @@
 import Api from '../components/Api.js';
+import Card from '../components/Card.js';
+import Form from '../components/Form.js';
 
 const api = new Api();
 
@@ -10,10 +12,15 @@ api.getAllQuotes()
 
     const reportText = document.querySelector('.idea__text');
 
+    // Получаем из жалобы массив ключевых слов и с помощью него фильтруем стихи
+
     function getKeywords() {
       const wordsArr = reportText.value.split(/[-\.,\s!]+/);
       const keywords = wordsArr.filter(word => word.length > 4)
-      console.log(keywords)
+      console.log(keywords);
+
+      //Получаем массив отобранных с помощью ключевых слов стихов
+
       const poems = [];
       keywords.map((word) => {
         const filteredQuotes = quotes.filter((quote) => quote.fields.text.includes(word));
@@ -26,34 +33,27 @@ api.getAllQuotes()
       })
       console.log(poems);
 
-        const cardTemplate = document.querySelector('.quote__template').content.querySelector('.quote__card');
-        const list = document.querySelector('.quote');
+      // Создаем карточки с отобранными стихами
 
-        function createCard(data) {
-          const cardElement = cardTemplate.cloneNode(true);
+      const list = document.querySelector('.quote');
+      const card = new Card();
 
-          const poemText = cardElement.querySelector('.quote__text');
-          const poemAuthor = cardElement.querySelector('.quote__author');
-
-          cardElement.addEventListener('click', evt => {
-           evt.target.closest('.quote__card')?.classList.toggle('quote__card_focus');
-          });
-
-          poemText.textContent = data.fields.text;
-          poemAuthor.textContent = data.fields.author;
-
-          return cardElement;
+      function renderCards(data) {
+          list.prepend(card.createCard(data))
         }
 
-        function renderCards(data) {
-          list.prepend(createCard(data))
-        }
-
-
-        poems.forEach((data) => {
+      poems.forEach((data) => {
           renderCards(data)
         })
       }
+
+      // Слушатели событий для цензуры и отправки формы
+
+      const form = document.querySelector('.report__form');
+      const censorCards = document.querySelector('.quote');
+      const succesMessage = document.querySelector('.idea__success-message');
+
+      const reportForm = new Form('.report__form');
 
       //пройти цензуру
       // const censorCards = document.querySelector('.quote');
@@ -63,11 +63,24 @@ api.getAllQuotes()
         getKeywords();
         reportText.value = ('Выберите стих на карточке'); //нельзя изменить стих и он какой-то будет
         reportText.disabled = true;
-
-        // censorCards.classList.remove('quote_hide');
+        censorCards.classList.remove('quote_hide');
+        succesMessage.classList.remove('idea__success-message_visible');
       });
 
-})
+      form.addEventListener('submit', (evt) => {
+        evt.preventDefault();
+        reportForm.getFormValues();
+        // api.submitForm(getFormValues());
+
+       censorCards.classList.add('quote_hide');
+       succesMessage.classList.add('idea__success-message_visible');
+       ideaСensor.classList.remove('report_button_hide');
+       ideaSend.classList.add('report__button_hide');
+       ideaText.disabled = false;
+       ideaText.value = ('');
+      })
+
+});
 
 
 
