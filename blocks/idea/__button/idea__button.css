@@ -1,7 +1,7 @@
 .idea__button {
   width: 250px;
   height: 60px;
-  background: #4F4F4F;
+  background: #EB5757;
   border-radius: 8px;
   font-family: "Open-Sans", Arial, sans-serif;
   font-style: normal;
@@ -10,8 +10,10 @@
   line-height: 25px;
   text-align: center;
   color: #FFFFFF;
+  transition: background .4s ease-out;
 }
 
 .idea__button:hover {
   cursor: pointer;
+  background: #B92F2F;
 }
