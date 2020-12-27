@@ -1,6 +1,6 @@
 # Активный гражданин-поэт
 
-Ссылка на просмотр: https://hackathon-2025.github.io/citizen-poet/index.html
+Ссылка на просмотр: https://hackathon-2025.github.io/citizen-poet/
 
 Cсылка на макет в фигме: https://www.figma.com/file/B0HzDGh29Occk6DSyQ0bjs/%D0%9F%D0%BE%D1%8D%D1%82?node-id=4%3A204
 
